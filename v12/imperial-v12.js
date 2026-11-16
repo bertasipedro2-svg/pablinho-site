@@ -1,0 +1,13 @@
+/* V12 Futurista Premium — decorative progressive enhancement only */
+(()=>{'use strict';const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;const hero=document.querySelector('.hero');
+if(hero){for(const cls of ['v12-grid','v12-scan','v12-glow']){const layer=document.createElement('div');layer.className=cls;layer.setAttribute('aria-hidden','true');hero.append(layer);}const content=hero.querySelector('.hero-content');if(content){const label=document.createElement('span');label.className='v12-label';label.textContent='Pablinho • Futurista Premium V12';content.append(label);}}
+const heading=document.querySelector('.catalog-heading .eyebrow');if(heading)heading.textContent='EXPERIÊNCIA V12 · FEITO NA BRASA';
+const progress=document.createElement('div');progress.className='v12-progress';progress.setAttribute('aria-hidden','true');document.body.append(progress);
+const back=document.createElement('button');back.className='v12-back';back.type='button';back.setAttribute('aria-label','Voltar ao início');back.textContent='↑';document.body.append(back);back.addEventListener('click',()=>scrollTo({top:0,behavior:reduced?'instant':'smooth'}));
+let scheduled=false;function scrollProgress(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{progress.style.transform='scaleX('+Math.min(1,scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight))+')';back.classList.toggle('show',scrollY>650);scheduled=false;});}
+addEventListener('scroll',scrollProgress,{passive:true});addEventListener('resize',scrollProgress,{passive:true});scrollProgress();
+const toast=document.createElement('div');toast.className='v12-toast';toast.setAttribute('role','status');toast.setAttribute('aria-live','polite');document.body.append(toast);let timer;
+document.addEventListener('click',e=>{if(e.target.closest('[data-add]'))notify('Adicionado ao pedido ✓');else{const plus=e.target.closest('[data-d]');if(plus&&plus.dataset.d==='1')notify('Carrinho atualizado ✓');}});
+function notify(t){toast.textContent=t;toast.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>toast.classList.remove('show'),1800);}
+const menu=document.getElementById('menu');if(menu){let pending=false;const bind=()=>{pending=false;menu.querySelectorAll('.product:not([data-v12])').forEach(el=>{el.dataset.v12='1';if(!reduced&&matchMedia('(hover:hover) and (pointer:fine)').matches)el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.style.setProperty('--v12-x',(100*(e.clientX-r.left)/r.width)+'%');el.style.setProperty('--v12-y',(100*(e.clientY-r.top)/r.height)+'%');},{passive:true});});};new MutationObserver(()=>{if(!pending){pending=true;requestAnimationFrame(bind);}}).observe(menu,{childList:true});bind();}
+})();
