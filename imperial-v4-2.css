@@ -1,0 +1,37 @@
+/* Imperial V4.2 — one cinematic engine, mobile-first and accessible */
+:root{--v42-gold:#f5c476;--v42-amber:#ed903e}
+.v42-progress{position:fixed;top:0;left:0;z-index:10000;width:100%;height:2px;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,#a85a29,#ffe0a2,#ed903e);pointer-events:none}
+.v42-embers{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none;contain:layout paint}
+.v42-ember{position:absolute;bottom:-12px;left:var(--x);width:var(--s);height:var(--s);border-radius:50%;background:radial-gradient(circle,#fff0bd,#e98b35 65%,transparent);box-shadow:0 0 9px #e98b3590;animation:v42-float var(--t) linear var(--d) infinite;opacity:0}
+.v42-light{position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 72% 35%,#e8a14a2b,transparent 58%);animation:v42-pulse 7s ease-in-out infinite alternate}
+.hero{isolation:isolate}.hero-content{position:relative;z-index:3}
+.product{--v42-rx:0deg;--v42-ry:0deg;--v42-mx:50%;--v42-my:50%;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease;transform-style:preserve-3d}
+.product.v42-hover{transform:perspective(950px) rotateX(var(--v42-rx)) rotateY(var(--v42-ry)) translateY(-3px);box-shadow:0 25px 52px #0008,0 0 24px #ed9a4533}
+.product.v42-hover:after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(circle at var(--v42-mx) var(--v42-my),#ffe2a91c,transparent 50%)}
+.v42-particle{position:fixed;z-index:9998;pointer-events:none;left:0;top:0;width:5px;height:5px;border-radius:50%;background:#f6c77a;box-shadow:0 0 8px #f5a142;animation:v42-pop .55s ease-out forwards}
+.v42-toast{position:fixed;bottom:calc(110px + env(safe-area-inset-bottom));left:50%;z-index:10001;transform:translate(-50%,14px);opacity:0;pointer-events:none;background:#211810;color:#ffe0a2;border:1px solid #9c7139;padding:10px 17px;border-radius:999px;font-size:13px;box-shadow:0 8px 25px #0008;transition:opacity .2s,transform .2s}
+.v42-toast.show{opacity:1;transform:translate(-50%,0)}
+.v42-reveal{opacity:0;transform:translateY(15px);transition:opacity .55s ease,transform .55s cubic-bezier(.22,1,.36,1)}
+.v42-reveal.v42-visible{opacity:1;transform:none}
+.v42-asset-warning{display:inline-flex;align-items:center;justify-content:center;min-height:80px;padding:16px;text-align:center;color:#f3ca8c;background:#241a14;font-size:13px}
+@keyframes v42-float{0%{opacity:0;transform:translate3d(0,0,0)}15%{opacity:.6}80%{opacity:.2}100%{opacity:0;transform:translate3d(var(--drift),-330px,0)}}
+@keyframes v42-pulse{from{opacity:.25}to{opacity:.8}}
+@keyframes v42-pop{to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.2)}}
+@media(hover:none),(pointer:coarse){.product.v42-hover{transform:none}.v42-light{animation:none}}
+@media(max-width:640px){.v42-embers .v42-ember:nth-child(n+7){display:none}.v42-toast{bottom:calc(100px + env(safe-area-inset-bottom))}}
+@media(prefers-reduced-motion:reduce){.v42-embers,.v42-light,.v42-particle{display:none!important}.v42-reveal{opacity:1!important;transform:none!important;transition:none!important}.product.v42-hover{transform:none!important}}
+html.v42-low-motion .v42-embers,html.v42-low-motion .v42-light,html.v42-low-motion .v42-particle{display:none!important}
+html.v42-low-motion .v42-reveal{opacity:1!important;transform:none!important;transition:none!important}
+
+/* Abertura da marca: slogan abaixo de Pablinho Espetinhos */
+.v42-intro{position:fixed;inset:0;z-index:20000;background:radial-gradient(ellipse at 50% 55%,#3d2317,#120e0b 65%);display:flex;align-items:center;justify-content:center;color:#ffe0a2;animation:v42-intro-in .45s ease both}
+.v42-intro-content{text-align:center;padding:32px 18px;animation:v42-intro-brand .85s cubic-bezier(.22,1,.36,1) both}
+.v42-intro-brand{font:800 clamp(42px,10vw,94px)/.86 'Barlow Condensed',Impact,sans-serif;letter-spacing:.055em;text-shadow:0 0 32px #f4a45230}
+.v42-intro-brand span{display:block;color:#eeb86d;font-size:.67em;letter-spacing:.13em;margin-top:10px}
+.v42-intro-line{height:1px;max-width:220px;margin:28px auto 20px;background:linear-gradient(90deg,transparent,#eeb86d,transparent)}
+.v42-intro-slogan{font-size:clamp(14px,3vw,19px);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#f6d19b}
+.v42-intro-skip{position:absolute;right:20px;bottom:24px;padding:10px 16px;border:1px solid #ae854b;border-radius:999px;background:#251a14;color:#ffe2ad}
+.v42-intro-exit{opacity:0;pointer-events:none;transition:opacity .6s ease}
+@keyframes v42-intro-in{from{opacity:0}to{opacity:1}}
+@keyframes v42-intro-brand{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.v42-intro{display:none!important}}
