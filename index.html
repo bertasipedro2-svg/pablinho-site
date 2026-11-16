@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Pablinho Espetinhos | Imperial Futurista 3D V4.3</title>
+<meta content="Cardápio do Pablinho Espetinhos. Monte seu pedido e envie pelo WhatsApp, com retirada ou entrega." name="description"/>
+<meta content="#171311" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="pt_BR" property="og:locale"/>
+<meta content="Pablinho Espetinhos | Cardápio" property="og:title"/>
+<meta content="Monte seu pedido e envie pelo WhatsApp." property="og:description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>/* Identidade e componentes: todos os valores visuais ficam neste sistema. */
+:root{color-scheme:dark;--background:oklch(.16 .006 65);--foreground:oklch(.96 .008 80);--panel:oklch(.205 .006 65);--panel-hover:oklch(.245 .009 65);--muted:oklch(.69 .014 75);--primary:oklch(.74 .177 53);--yellow:oklch(.84 .16 80);--primary-foreground:oklch(.15 .01 60);--border:oklch(.30 .009 65);--success:oklch(.75 .16 145);--danger:oklch(.77 .13 30);--overlay:oklch(.10 .005 60/.75);--hero-overlay:linear-gradient(90deg,oklch(.10 .005 60/.98),oklch(.10 .005 60/.82) 35%,oklch(.10 .005 60/.04) 80%);--shadow:0 20px 70px oklch(.05 0 0/.35);--font:'Barlow',system-ui,sans-serif;--display:'Barlow Condensed','Arial Narrow',sans-serif;--radius:8px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--background);color:var(--foreground);font:400 16px/1.5 var(--font);padding-bottom:28px;transition:padding-bottom .25s}body.has-cart{padding-bottom:105px}body.lock{overflow:hidden}button,input,select,textarea{font:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}a{color:inherit;text-decoration:none}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.55}:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}h1,h2,h3,p{margin:0}h1,h2,h3{font-family:var(--display);letter-spacing:0}button[hidden],[hidden]{display:none!important}.container{width:min(1184px,calc(100% - 64px));margin-inline:auto}.sr-only,.skip:not(:focus){position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.skip:focus{position:fixed;top:10px;left:10px;z-index:100;background:var(--primary);color:var(--primary-foreground);padding:12px}
+.site-header{background:var(--background);border-bottom:1px solid var(--border)}.header-inner{min-height:89px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;gap:12px;align-items:center;line-height:1;font:700 24px var(--display)}.brand img{width:62px;height:62px;object-fit:contain}.brand small{display:block;font:600 14px var(--display);color:var(--primary)}.header-inner nav{display:flex;gap:32px;font-size:14px;font-weight:500}.header-inner nav a:hover{color:var(--primary)}.button{border:0;border-radius:var(--radius);min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:16px;padding:0 24px;background:var(--primary);color:var(--primary-foreground);font-size:15px;font-weight:700;transition:background .2s}.button:hover{background:var(--yellow)}.button.secondary{background:var(--panel);color:var(--foreground);border:1px solid var(--border)}.contact{background:transparent;color:var(--foreground);border:1px solid var(--border);font-size:14px}.contact:hover{background:var(--panel-hover)}.contact .ic{color:var(--success);font-size:18px}
+.hero{position:relative;isolation:isolate;height:410px;overflow:hidden}.hero-photo,.hero-shade{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1}.hero-photo{object-position:center 56%}.hero-shade{background:var(--hero-overlay)}.hero-content{height:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.eyebrow{font-size:11px;font-weight:700;color:var(--primary)}.hero .eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:15px}.short-line{width:24px;height:2px;background:var(--primary)}h1{font-size:78px;line-height:.94;font-weight:700}h1 span{color:var(--primary)}.hero-slogan{font-size:17px;margin-top:20px}.hero-actions{display:flex;align-items:center;gap:24px;margin-top:25px}.hero-caption{font-size:13px;color:var(--muted)}.service-band{background:var(--panel);border-block:1px solid var(--border)}.service-inner{min-height:63px;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:13px}.service-time,.service-options{display:flex;align-items:center;gap:24px}.status{display:flex;align-items:center;gap:7px;color:var(--success);font-weight:600}.status:before{content:'';width:7px;height:7px;display:inline-block;background:currentColor;border-radius:100%}.status.closed{color:var(--muted)}.service-options{color:var(--muted)}
+.catalog{padding-top:44px}.catalog-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:25px}.catalog-heading h2{font-size:43px;line-height:1.2;margin-top:6px}.heading-dot{color:var(--primary)}.catalog-count{font-size:13px;color:var(--muted)}.toolbar{display:flex;gap:14px;align-items:stretch}.search{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:0 16px;flex:1;min-width:0}.search>.ic{font-size:22px;color:var(--muted)}.search input{border:0;background:none;padding:14px 0;width:100%;min-width:0;color:var(--foreground);outline-offset:2px}.search input::placeholder{color:var(--muted)}.sort{width:230px}.sort select{height:100%;font-size:14px}.categories{display:flex;gap:28px;border-bottom:1px solid var(--border);margin:18px 0 24px;overflow-x:auto;scrollbar-width:none;position:sticky;top:0;background:var(--background);z-index:5}.categories button{flex:none;background:none;color:var(--muted);border:0;border-bottom:2px solid transparent;padding:16px 0 14px;min-height:50px;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;white-space:nowrap}.categories button[aria-pressed=true]{color:var(--primary);border-bottom-color:var(--primary)}.categories button:hover{color:var(--foreground)}.category-icon{font-size:19px}.section-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:29px 0 17px}.section-heading h3{font-size:27px}.section-heading p{color:var(--muted);font-size:13px}.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.product{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--panel);display:flex;flex-direction:column;transition:border-color .2s}.product:hover{border-color:var(--muted)}.product.unavailable{opacity:.65}.product-image{position:relative;aspect-ratio:1.65;overflow:hidden;background:var(--background)}.product-image img{width:100%;height:100%;object-fit:cover;display:block}.product-badge{position:absolute;top:12px;left:12px;padding:5px 10px;border-radius:4px;background:var(--yellow);color:var(--primary-foreground);font-size:10px;font-weight:700}.product-content{padding:18px;display:flex;flex-direction:column;flex:1}.product h4{font:600 25px/1.2 var(--display);margin:0 0 8px}.description{font-size:13px;line-height:1.5;color:var(--muted);flex:1}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:19px;min-height:44px}.price{font-size:20px;font-weight:700;color:var(--primary);white-space:nowrap}.add{min-height:44px;padding:0 15px;font-size:13px;gap:10px}.add span{font-size:20px}.step{display:flex;align-items:center;justify-content:space-between;gap:6px;border:1px solid var(--border);border-radius:var(--radius);height:44px;min-width:117px;background:var(--background)}.step button{width:40px;height:42px;border:0;background:none;color:var(--primary);font-size:22px;border-radius:var(--radius)}.step button:hover{background:var(--panel-hover)}.step output{min-width:19px;text-align:center;font-weight:600}.off{font-size:12px;color:var(--muted)}#empty{padding:65px 0;text-align:center}#empty>.ic{width:50px;height:50px;color:var(--primary)}#empty h3{font-size:30px}#empty p{color:var(--muted);margin:10px 0 20px}
+footer{margin-top:55px!important;border-top:1px solid var(--border);padding:25px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:13px;color:var(--muted)}.footer-brand{display:flex;align-items:center;gap:15px}.footer-brand img{object-fit:contain}.footer-brand strong{color:var(--foreground);font-family:var(--display);font-size:19px}.footer-brand p{margin-top:4px}footer>div:last-child{text-align:right}footer a{color:var(--foreground)}footer p{margin-top:5px}.cart-bar{position:fixed;bottom:0;left:0;right:0;padding:13px 0 calc(13px + env(safe-area-inset-bottom));background:var(--background);border-top:1px solid var(--border);z-index:15}.cart-button{margin-inline:auto;width:min(570px,100%);min-height:55px;display:flex;align-items:center;gap:15px;border:0;border-radius:var(--radius);padding:0 21px;background:var(--primary);color:var(--primary-foreground);font:600 16px var(--font)}.cart-button:hover{background:var(--yellow)}.cart-icon{font-size:23px}.cart-label{display:flex;align-items:center;gap:11px}.cart-label span{min-width:25px;height:25px;display:grid;place-items:center;border-radius:4px;background:var(--primary-foreground);color:var(--yellow);font-size:12px}.cart-total{margin-left:auto;font-weight:700}
+dialog{position:fixed;inset:0 0 0 auto;margin:0;width:min(580px,100%);max-width:100%;height:100dvh;max-height:100dvh;background:var(--background);color:var(--foreground);border:0;border-left:1px solid var(--border);padding:25px 28px calc(35px + env(safe-area-inset-bottom));overflow:auto;box-shadow:var(--shadow)}dialog::backdrop{background:var(--overlay)}.sheet-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:10px}.sheet-header h2{font-size:36px}.icon-button{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--border);border-radius:var(--radius);background:var(--panel);color:var(--foreground);font-size:25px;flex:none}.muted{color:var(--muted);font-weight:400;font-size:13px}.cart-list-top{display:flex;justify-content:space-between;align-items:center;margin-top:26px}.cart-list-top h3{font-size:24px}.text-button{border:0;background:none;color:var(--primary);font-size:13px;padding:12px 0;min-height:44px}.cart-row{display:grid;grid-template-columns:54px 1fr auto;gap:12px;align-items:center;padding:15px 0;border-bottom:1px solid var(--border)}.cart-row img{width:54px;height:54px;object-fit:cover;border-radius:4px}.cart-row h4{font-size:14px;margin:0 0 5px}.cart-row p{font-size:12px;color:var(--muted)}.cart-row .step{min-width:105px}.cart-row .step button{width:32px}.row-tools{display:flex;align-items:center;gap:6px}.remove{width:30px;min-height:44px;background:none;border:0;color:var(--muted);font-size:21px}.continue{margin-top:7px}.form-title{font-size:26px;margin:18px 0 0}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.wide{grid-column:1/-1}form label{display:block;font-weight:500;font-size:14px;margin:16px 0 0}input:not([type=radio]):not([type=checkbox]),select,textarea{width:100%;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);color:var(--foreground);padding:12px;min-height:47px}form label input,form label select,form label textarea{margin-top:6px}textarea{resize:vertical;min-height:90px}fieldset{border:0;padding:0;margin:23px 0 0}legend{font-weight:500;font-size:14px}.radios{display:flex;gap:12px;margin-top:8px}.radios label{display:flex;align-items:center;gap:9px;border:1px solid var(--border);border-radius:var(--radius);background:var(--panel);padding:13px;flex:1;margin:0}.radios label:has(input:checked){border-color:var(--primary);color:var(--primary)}input[type=radio],input[type=checkbox]{accent-color:var(--primary);width:18px;height:18px;margin:0}.check-label{display:flex;gap:10px;align-items:center;min-height:44px}.delivery-note{font-size:12px;color:var(--yellow);margin-top:10px}.totals{border-top:1px solid var(--border);padding-top:17px;margin-top:24px}.totals div{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:7px 0;font-size:14px}.totals div:last-child{font-size:21px;font-weight:700;padding-top:12px}.totals .fee{color:var(--muted);font-size:12px}.error{color:var(--danger);font-size:14px;margin-top:10px}.error:empty{display:none}.send{width:100%;margin-top:16px;min-height:52px}.checkout-note{font-size:12px;color:var(--muted);text-align:center;margin:12px 0 0}input[aria-invalid=true]{border-color:var(--danger)}
+@media(min-width:1000px){.product-grid.combo-grid{grid-template-columns:1fr}.combo-grid .product{display:grid;grid-template-columns:42% 1fr;min-height:240px}.combo-grid .product-image{aspect-ratio:auto}.combo-grid .product-content{padding:26px 30px}.combo-grid .product h4{font-size:34px}.combo-grid .description{max-width:440px;font-size:14px}.combo-grid .product-bottom{margin-top:25px}.combo-grid .price{font-size:26px}.combo-grid .add{min-width:160px}}
+@media(max-width:800px){.container{width:calc(100% - 40px)}.header-inner nav{display:none}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.service-inner{gap:10px}.service-options{gap:12px}.service-options span:first-child{display:none}.hero{height:360px}h1{font-size:67px}.categories{gap:24px}.hero-caption{display:none}}
+@media(max-width:520px){.container{width:calc(100% - 32px)}.header-inner{min-height:76px;gap:8px}.brand{gap:8px;font-size:21px}.brand img{width:49px;height:49px}.brand small{font-size:12px}.contact{padding:0 11px;min-height:42px;font-size:11px;gap:6px}.hero{height:290px}.hero-photo{object-position:65% center}.hero-shade{background:linear-gradient(90deg,oklch(.10 .005 60/.95),oklch(.10 .005 60/.67) 50%,oklch(.10 .005 60/.25))}h1{font-size:57px}.hero .eyebrow{font-size:10px;margin-bottom:17px}.hero-slogan{font-size:14px;margin-top:18px;max-width:280px}.hero-actions{margin-top:22px}.hero-actions .button{min-height:45px;padding-inline:20px;font-size:13px}.service-inner{min-height:73px;align-items:flex-start;justify-content:center;flex-direction:column;gap:5px;padding-block:12px;font-size:11px}.service-time{gap:13px}.service-options{gap:18px}.service-options span:first-child{display:inline}.catalog{padding-top:23px}.catalog-heading{margin-bottom:18px}.catalog-heading h2{font-size:35px}.catalog-heading .eyebrow{font-size:9px}.catalog-count{display:none}.toolbar{flex-wrap:wrap;gap:10px}.search{flex-basis:100%;height:49px}.search input{font-size:13px}.sort{width:100%;display:flex;justify-content:flex-end}.sort select{width:auto;border:0;background:transparent;padding:4px 0;min-height:35px;font-size:12px}.categories{margin-top:5px;margin-bottom:17px;gap:23px}.categories button{font-size:12px;gap:6px;min-height:48px;padding-block:11px}.category-icon{font-size:16px}.section-heading{margin:22px 0 13px;align-items:flex-start;flex-direction:column;gap:3px}.section-heading h3{font-size:25px}.section-heading p{font-size:12px}.product-grid{grid-template-columns:1fr;gap:13px}.product{display:grid;grid-template-columns:112px minmax(0,1fr);min-height:153px}.product-image{aspect-ratio:auto;height:100%}.product-content{padding:13px}.product h4{font-size:22px;margin-bottom:6px}.description{font-size:12px}.product-bottom{margin-top:12px;min-height:44px;gap:5px}.price{font-size:17px}.add{padding-inline:10px;font-size:12px;gap:5px}.product-badge{left:6px;top:6px;font-size:8px;padding:4px 6px}.combo-grid .product{display:flex}.combo-grid .product-image{aspect-ratio:2;height:auto}.combo-grid .product-content{padding:17px}.combo-grid .product h4{font-size:27px}.combo-grid .description{font-size:13px}.combo-grid .price{font-size:22px}.combo-grid .add{padding-inline:18px}.combo-grid .product-badge{left:12px;top:12px;font-size:10px}.step{min-width:100px;gap:0}.step button{width:32px}.cart-bar{padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom))}.cart-button{padding:0 15px;gap:10px;font-size:14px;min-height:54px}.cart-label{gap:8px}.cart-total{font-size:15px}footer{margin-top:30px!important;flex-direction:column;align-items:flex-start;padding:22px 0;gap:18px}footer>div:last-child{text-align:left}dialog{padding:20px 16px calc(30px + env(safe-area-inset-bottom))}.form-grid{grid-template-columns:1fr}.wide{grid-column:auto}.cart-row{grid-template-columns:45px 1fr;gap:10px}.cart-row img{width:45px;height:45px;grid-row:1/3}.row-tools{grid-column:2;justify-content:flex-start}.cart-row .step{width:110px}.totals div:last-child{font-size:19px}}
+/* Acabamento: ícones, busca, barra do pedido, sugestões. */
+.ic{width:1.15em;height:1.15em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.2em}
+.search input:not([type=radio]):not([type=checkbox]){border:0;background:none;border-radius:0;padding:14px 0;min-height:0}
+.service-options .ic{margin-right:7px;font-size:15px}
+.cart-bar{transform:translateY(100%);visibility:hidden;transition:transform .25s ease,visibility 0s linear .25s}.cart-bar.show{transform:none;visibility:visible;transition:transform .25s ease}
+.suggest{margin-top:22px}.suggest h3{font-size:22px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.chip{min-height:44px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;border:1px solid var(--border);border-radius:var(--radius);background:var(--panel);color:var(--foreground);font-size:13px;font-weight:600}.chip:hover{background:var(--panel-hover);border-color:var(--primary)}.chip span{color:var(--primary);font-size:18px;line-height:1}.chip b{color:var(--primary)}
+.closed-note{font-size:13px;color:var(--yellow);margin:14px 0 0}
+.noscript{padding:30px 0;color:var(--muted)}.noscript a{color:var(--primary);text-decoration:underline}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+</style>
+
+
+
+<link rel="stylesheet" href="./imperial-v4-2.css">
+<link rel="stylesheet" href="./imperial-v4-3.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="m20.5 20.5-4.2-4.2"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+<symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></symbol>
+<symbol id="i-cup" viewBox="0 0 24 24"><path d="m6 8 1.75 12.28a2 2 0 0 0 2 1.72h4.5a2 2 0 0 0 2-1.72L18 8"/><path d="M5 8h14"/><path d="M7 15a6.47 6.47 0 0 1 5 0 6.47 6.47 0 0 0 5 0"/><path d="m12 8 1-6h2"/></symbol>
+<symbol id="i-bar" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M6 9h12M6 15h12M12 3v18"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+</defs></svg>
+<a class="skip" href="#cardapio">Ir para o cardápio</a>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="#inicio"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-img="logo" alt="Logo Pablinho Espetinhos" width="60" height="60"><span>PABLINHO <small>ESPETINHOS</small></span></a><nav aria-label="Navegação principal"><a href="#cardapio">Cardápio</a><a data-insta href="https://instagram.com/pablinho_espetinhoss" target="_blank" rel="noopener">Instagram ↗</a></nav><a class="button contact" id="zap" href="https://wa.me/5511925340645" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg> Falar no WhatsApp</a></div></header>
+<main>
+<section class="hero" id="inicio"><img class="hero-photo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-img="topo" alt="Espetinhos na brasa do catálogo Pablinho" fetchpriority="high"><div class="hero-shade"></div><div class="container hero-content"><div class="eyebrow"><span class="short-line"></span> BRASA BOA, BRASA FORTE</div><h1>PABLINHO<br><span>ESPETINHOS</span></h1><p class="hero-slogan">Tamo na área, se derrubar é pênalti.</p><div class="hero-actions"><a class="button" href="#cardapio">Ver cardápio <span aria-hidden="true">↓</span></a><span class="hero-caption">Na brasa. No capricho.</span></div></div></section>
+<div class="service-band"><div class="container service-inner"><div class="service-time"><span id="status" class="status"></span><span id="hours">Atendimento das 18h às 23h</span></div><div class="service-options"><span><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Retirada no local</span><span><svg class="ic" aria-hidden="true"><use href="#i-truck"/></svg>Entrega · taxa a confirmar</span></div></div></div>
+<section class="catalog container" id="cardapio"><div class="catalog-heading"><div><span class="eyebrow">FEITO NA BRASA, DO NOSSO JEITO</span><h2>Nosso cardápio<span class="heading-dot">.</span></h2></div><span class="catalog-count" id="catalogCount">27 opções para escolher</span></div>
+<div class="toolbar"><label class="search"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><input id="busca" type="search" placeholder="O que vai ser hoje? Busque seu favorito…" aria-label="Buscar produtos" autocomplete="off"><button id="limparBusca" class="icon-button" aria-label="Limpar busca" hidden>×</button></label><label class="sort"><span class="sr-only">Ordenar produtos</span><select id="ordem"><option value="original">Ordenar: destaques</option><option value="asc">Menor preço</option><option value="desc">Maior preço</option></select></label></div>
+<nav class="categories" aria-label="Categorias do cardápio" id="cats"></nav><div id="resultadoBusca" class="sr-only" aria-live="polite"></div><div id="menu"></div><noscript><p class="noscript">Para ver o cardápio e montar o pedido, ative o JavaScript do navegador ou chame o Pablinho direto no <a href="https://wa.me/5511925340645">WhatsApp</a>.</p></noscript><div id="empty" hidden><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><h3>Nenhum produto encontrado</h3><p>Tente outro nome ou categoria.</p><button class="button secondary" id="reset">Limpar filtros</button></div>
+</section></main>
+<footer class="container"><div class="footer-brand"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-img="logo" alt="Pablinho Espetinhos" width="64" height="64"><div><strong>BRASA BOA, BRASA FORTE</strong><p>Tamo na área, se derrubar é pênalti.</p></div></div><div><a data-insta href="https://instagram.com/pablinho_espetinhoss" target="_blank" rel="noopener">@pablinho_espetinhoss ↗</a><p>Atendimento das 18h às 23h</p></div></footer>
+<div class="cart-bar" id="bar"><div class="container"><button class="cart-button" id="abrir" aria-label="Abrir carrinho"><svg class="ic cart-icon" aria-hidden="true"><use href="#i-bag"/></svg><span class="cart-label">Meu pedido <span id="count">0</span></span><span class="cart-total" id="cartTotal">R$ 0,00</span><span aria-hidden="true">→</span></button></div></div>
+<dialog id="sheet" aria-labelledby="cart-title" aria-describedby="cart-description"><div class="sheet-header"><div><span class="eyebrow">PABLINHO ESPETINHOS</span><h2 id="cart-title">Seu pedido<span class="heading-dot">.</span></h2></div><button class="icon-button" id="fechar" aria-label="Fechar carrinho">×</button></div><p id="cart-description" class="muted">Confira os itens e escolha como receber.</p><div class="cart-list-top"><h3>Itens do pedido</h3><button class="text-button" id="clear">Limpar carrinho</button></div><div id="lista"></div><p id="cart-empty" hidden>Seu carrinho está vazio.</p><div id="sugestoes" class="suggest" hidden></div><button class="text-button continue" id="continuar">← Continuar comprando</button>
+<form id="checkout" novalidate><h3 class="form-title">Seus dados</h3><div class="form-grid"><label>Nome completo<input id="cli" name="nome" type="text" autocomplete="name" maxlength="120" required placeholder="Como podemos chamar você?"></label><label>Telefone<input id="tel" name="telefone" type="tel" autocomplete="tel" maxlength="20" required placeholder="(11) 99999-9999"></label></div><fieldset><legend>Como você quer receber?</legend><div class="radios"><label><input name="tipo" type="radio" value="Retirada" checked> Retirada</label><label><input name="tipo" type="radio" value="Entrega"> Entrega</label></div></fieldset>
+<div id="optend" hidden><div class="form-grid"><label class="wide">Rua / Avenida<input id="rua" autocomplete="address-line1" maxlength="160"></label><label>Número<input id="numero" maxlength="20"></label><label>Bairro<input id="bairro" maxlength="100"></label><label>Cidade<input id="cidade" autocomplete="address-level2" maxlength="100"></label><label>CEP<input id="cep" autocomplete="postal-code" inputmode="numeric" maxlength="9" placeholder="00000-000"></label><label class="wide">Complemento / referência <span class="muted">(opcional)</span><input id="complemento" autocomplete="address-line2" maxlength="200"></label></div><p class="delivery-note">Taxa de entrega a confirmar pelo estabelecimento.</p></div>
+<label>Forma de pagamento<select id="pag"><option>Pix</option><option>Dinheiro</option><option>Cartão</option></select></label><div id="cash" hidden><label class="check-label"><input id="needChange" type="checkbox"> Preciso de troco</label><label id="change-field" hidden>Troco para quanto? (R$)<input id="troco" type="text" inputmode="decimal" placeholder="Ex.: 100,00" maxlength="12"></label></div>
+<label>Observações <span class="muted">(opcional)</span><textarea id="obs" maxlength="1000" placeholder="Algum detalhe sobre o seu pedido?"></textarea></label><div id="tot" class="totals"></div><p id="err" class="error" role="alert" tabindex="-1"></p><p id="closedNote" class="closed-note" hidden></p><button class="button send" type="submit" id="enviar">Enviar pedido pelo WhatsApp <span aria-hidden="true">↗</span></button><p class="checkout-note">O WhatsApp abrirá com seu pedido. O envio e a confirmação são feitos na conversa com o estabelecimento.</p></form></dialog>
+<div class="sr-only" id="announce" aria-live="polite"></div>
+<script src="./imperial-v4-2-images.js"></script>
+<script>
+/* Imagens do catálogo, gravadas uma única vez e reaproveitadas.
+   Para trocar uma foto: troque o texto da chave abaixo, ou aponte "imagem" do produto para um arquivo (ex.: "fotos/misto.jpg"). */
+
+</script>
+<script>
+
+/* ============ EDITE AQUI ============ */
+
+const LOJA = {
+  nome: "Pablinho Espetinhos",
+  whatsapp: "5511925340645",   /* 55 + DDD + número, só dígitos. Ex.: "5511999999999" */
+  subtitulo: "Espetinhos na brasa. Monte seu pedido e envie pelo WhatsApp.",
+  horario: "Atendimento das 18h às 23h",               /* opcional. Ex.: "Todos os dias, das 18h às 23h" */
+  taxaEntrega: null,         /* número (ex.: 5) ou null para "a combinar no WhatsApp" */
+  pedidoMinimo: 0,           /* valor mínimo do pedido; 0 = sem mínimo */
+  instagram: "pablinho_espetinhoss"              /* opcional, sem @. Ex.: "minhaespetaria" */
+};
+
+/* Categorias, na ordem em que aparecem (iguais ao campo "categoria" dos produtos) */
+const CATEGORIAS = ["Combos", "Espetos", "Adicionais", "Bebidas", "Gôndola"];
+const CATEGORIA_INFO = {"Combos":"Opções para compartilhar e aproveitar junto.","Espetos":"Escolha seus favoritos preparados na brasa.","Adicionais":"Acompanhamentos e molhos para completar o pedido.","Bebidas":"Bebidas para acompanhar sua refeição.","Gôndola":"Doces e opções para finalizar o pedido."};
+
+/* Produtos do Pablinho Espetinhos. Para editar, mude nome, preco (com ponto) e descricao.
+   icone: ilustração do produto. imagem: nome da foto em IMG (no fim do arquivo) ou caminho de um arquivo, ex.: "fotos/misto.jpg"; quando preenchida, substitui a ilustração. disponivel: false mostra "Indisponível hoje". */
+const PRODUTOS = [
+  {nome: "Combo Família", categoria: "Combos", preco: 94.9, descricao: "10 espetinhos: 2 fraldinha, 2 carne com bacon, 2 frango, 2 linguiça e 2 queijo coalho. Serve 4 pessoas.", icone: "combo", imagem: "topo", disponivel: true},
+  {nome: "Carne fraldinha", categoria: "Espetos", preco: 11, descricao: "Espetinho de fraldinha na brasa.", icone: "carne", imagem: "foto-carne-fraldinha", disponivel: true},
+  {nome: "Carne com bacon", categoria: "Espetos", preco: 12, descricao: "Espetinho de carne com bacon, preparado na brasa.", icone: "carne-bacon", imagem: "foto-carne-com-bacon", disponivel: true},
+  {nome: "Frango", categoria: "Espetos", preco: 10, descricao: "Espetinho de frango na brasa.", icone: "frango", imagem: "foto-frango", disponivel: true},
+  {nome: "Frango com bacon", categoria: "Espetos", preco: 15, descricao: "Espetinho de frango com bacon, preparado na brasa.", icone: "frango-bacon", imagem: "foto-frango-com-bacon", disponivel: true},
+  {nome: "Linguiça", categoria: "Espetos", preco: 10, descricao: "Espetinho de linguiça na brasa.", icone: "linguica", imagem: "foto-carne-com-bacon", disponivel: true},
+  {nome: "Misto", categoria: "Espetos", preco: 11, descricao: "Uma combinação de sabores em um só espetinho.", icone: "misto", imagem: "topo", disponivel: true},
+  {nome: "Kafta com queijo", categoria: "Espetos", preco: 16, descricao: "Kafta acompanhada de queijo.", icone: "kafta", imagem: "foto-carne-fraldinha", disponivel: true},
+  {nome: "Queijo coalho", categoria: "Espetos", preco: 10, descricao: "Queijo coalho preparado na brasa.", icone: "queijo", imagem: "topo", disponivel: true},
+  {nome: "Queijo coalho com mel", categoria: "Espetos", preco: 12, descricao: "Queijo coalho com toque de mel.", icone: "queijo-mel", imagem: "topo", disponivel: true},
+  {nome: "Queijo com bacon", categoria: "Espetos", preco: 16, descricao: "Queijo combinado com bacon.", icone: "queijo-bacon", imagem: "foto-carne-com-bacon", disponivel: true},
+  {nome: "Pão de alho", categoria: "Espetos", preco: 10, descricao: "Pão de alho preparado na brasa.", icone: "pao-alho", imagem: "topo", disponivel: true},
+  {nome: "Molho de pimenta", categoria: "Adicionais", preco: 1, descricao: "Adicional para acompanhar seu pedido.", icone: "molho-pimenta", imagem: "icone-molho-de-pimenta", disponivel: true},
+  {nome: "Molho de alho", categoria: "Adicionais", preco: 1, descricao: "Adicional para acompanhar seu pedido.", icone: "molho-alho", imagem: "icone-molho-de-alho", disponivel: true},
+  {nome: "Farofa", categoria: "Adicionais", preco: 1, descricao: "Acompanhamento para completar seu pedido.", icone: "farofa", imagem: "icone-farofa", disponivel: true},
+  {nome: "Mel", categoria: "Adicionais", preco: 1, descricao: "Adicional para combinar com seu espetinho.", icone: "mel", imagem: "icone-mel", disponivel: true},
+  {nome: "Coca lata", categoria: "Bebidas", preco: 9, descricao: "Refrigerante em lata.", icone: "lata-coca", imagem: "coca.jpg", disponivel: true},
+  {nome: "Fanta lata", categoria: "Bebidas", preco: 9, descricao: "Refrigerante em lata.", icone: "lata-fanta", imagem: "fanta.jpg", disponivel: true},
+  {nome: "Coca 2L", categoria: "Bebidas", preco: 17, descricao: "Refrigerante Coca-Cola de 2 litros.", icone: "garrafa-coca", imagem: "icone-coca-2l", disponivel: true},
+  {nome: "Água", categoria: "Bebidas", preco: 5, descricao: "Água para acompanhar sua refeição.", icone: "agua", imagem: "icone-agua", disponivel: true},
+  {nome: "Skol lata", categoria: "Bebidas", preco: 7, descricao: "Cerveja em lata.", icone: "lata-skol", imagem: "icone-skol-lata", disponivel: true},
+  {nome: "Brahma lata", categoria: "Bebidas", preco: 7, descricao: "Cerveja em lata.", icone: "lata-brahma", imagem: "icone-skol-lata", disponivel: true},
+  {nome: "Heineken lata", categoria: "Bebidas", preco: 10, descricao: "Cerveja em lata.", icone: "lata-heineken", imagem: "icone-skol-lata", disponivel: true},
+  {nome: "Budweiser lata", categoria: "Bebidas", preco: 8.5, descricao: "Cerveja em lata.", icone: "lata-budweiser", imagem: "icone-skol-lata", disponivel: true},
+  {nome: "Trento Chocolate", categoria: "Gôndola", preco: 7, descricao: "Chocolate Trento.", icone: "trento-chocolate", imagem: "icone-trento-chocolate", disponivel: true},
+  {nome: "Trento Branco-Dark", categoria: "Gôndola", preco: 7, descricao: "Chocolate Trento Branco-Dark.", icone: "trento-branco-dark", imagem: "icone-trento-chocolate", disponivel: true},
+  {nome: "Trento Duo", categoria: "Gôndola", preco: 7, descricao: "Chocolate Trento Duo.", icone: "trento-duo", imagem: "icone-trento-chocolate", disponivel: true}
+];
+
+
+/* Configuração adicional: horários locais de São Paulo; taxa null nunca significa frete grátis. */
+const CONFIG = { abertura: '18:00', fechamento: '23:00', fuso: 'America/Sao_Paulo' };
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const brl = n => Number(n).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const normalize = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const cents = p => Math.round(p.preco * 100);
+const img = k => IMG[k] || k;
+const icon = (id, cls) => '<svg class="ic' + (cls ? ' ' + cls : '') + '" aria-hidden="true"><use href="#' + id + '"/></svg>';
+const STORAGE = 'pablinho-cart-v1';
+let qtd = {}, categoria = 'Todos';
+try { const stored=JSON.parse(localStorage.getItem(STORAGE)||'{}'); if(stored && typeof stored==='object' && !Array.isArray(stored)) Object.entries(stored).forEach(([id,q])=>{if(/^\d+$/.test(id)&&PRODUTOS[Number(id)]?.disponivel&&Number.isSafeInteger(q)&&q>0)qtd[id]=q;}); } catch(e) { /* Navegação privada ou armazenamento indisponível: carrinho continua em memória. */ }
+const ids = () => Object.keys(qtd).map(Number).filter(i=>PRODUTOS[i]?.disponivel&&qtd[i]>0);
+const count = () => ids().reduce((s,i)=>s+qtd[i],0);
+const subtotalCents = () => ids().reduce((s,i)=>s+cents(PRODUTOS[i])*qtd[i],0);
+const delivery = () => $('input[name="tipo"]:checked').value === 'Entrega';
+const totalCents = () => subtotalCents()+(delivery()&&LOJA.taxaEntrega!=null?Math.round(LOJA.taxaEntrega*100):0);
+const categoryIcons = {'Todos':'i-grid','Combos':'i-users','Espetos':'i-flame','Adicionais':'i-plus','Bebidas':'i-cup','Gôndola':'i-bar'};
+function save(){ try{localStorage.setItem(STORAGE,JSON.stringify(qtd));}catch(e){} }
+function isOpen(){
+ const parts=new Intl.DateTimeFormat('pt-BR',{timeZone:CONFIG.fuso,hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+ const hour=Number(parts.find(p=>p.type==='hour')?.value||0), minute=Number(parts.find(p=>p.type==='minute')?.value||0);
+ const toMinutes=s=>{const [h,m]=s.split(':').map(Number);return h*60+m;};
+ const now=hour*60+minute, start=toMinutes(CONFIG.abertura), end=toMinutes(CONFIG.fechamento);
+ return start<end?now>=start&&now<end:now>=start||now<end;
+}
+const hr = t => { const [h,m]=t.split(':'); return Number(h)+'h'+(m==='00'?'':m); };
+function status(){
+ const open=isOpen();
+ $('#status').textContent=open?'Aberto agora':'Fechado agora';$('#status').classList.toggle('closed',!open);
+ const note=$('#closedNote');note.hidden=open;
+ note.textContent=open?'':'Estamos fechados agora. Atendemos das '+hr(CONFIG.abertura)+' às '+hr(CONFIG.fechamento)+'; seu pedido será respondido quando abrirmos.';
+}
+function stepper(i){return '<div class="step"><button type="button" data-i="'+i+'" data-d="-1" aria-label="Diminuir '+esc(PRODUTOS[i].nome)+'">−</button><output aria-label="Quantidade de '+esc(PRODUTOS[i].nome)+'">'+qtd[i]+'</output><button type="button" data-i="'+i+'" data-d="1" aria-label="Aumentar '+esc(PRODUTOS[i].nome)+'">+</button></div>';}
+function bottom(i){const p=PRODUTOS[i];return '<span class="price">'+brl(p.preco)+'</span>'+(!p.disponivel?'<span class="off">Indisponível hoje</span>':qtd[i]?stepper(i):'<button type="button" class="button add" data-i="'+i+'" data-d="1" aria-label="Adicionar '+esc(p.nome)+'"><span aria-hidden="true">+</span> Adicionar</button>');}
+function item(i){const p=PRODUTOS[i];return '<article class="product'+(!p.disponivel?' unavailable':'')+'" data-item="'+i+'"><div class="product-image"><img src="'+esc(img(p.imagem))+'" alt="'+esc(p.nome)+'" loading="lazy" decoding="async">'+(p.categoria==='Combos'?'<span class="product-badge">PARA COMPARTILHAR · 4 PESSOAS</span>':'')+'</div><div class="product-content"><h4>'+esc(p.nome)+'</h4><p class="description">'+esc(p.descricao)+'</p><div class="product-bottom">'+bottom(i)+'</div></div></article>';}
+function refreshItem(i){document.querySelectorAll('[data-item="'+i+'"] .product-bottom').forEach(el=>{el.innerHTML=bottom(i);});}
+function menu(){
+ const term=normalize($('#busca').value.trim()),order=$('#ordem').value;
+ let list=PRODUTOS.map((p,i)=>i).filter(i=>(categoria==='Todos'||PRODUTOS[i].categoria===categoria)&&normalize(PRODUTOS[i].nome+' '+PRODUTOS[i].descricao).includes(term));
+ if(order!=='original')list.sort((a,b)=>(cents(PRODUTOS[a])-cents(PRODUTOS[b]))*(order==='asc'?1:-1));
+ const section=(name,rows)=>'<section><div class="section-heading"><h3>'+esc(name)+'</h3><p>'+esc(CATEGORIA_INFO[name]||'')+'</p></div><div class="product-grid '+(name==='Combos'?'combo-grid':'')+'">'+rows.map(item).join('')+'</div></section>';
+ $('#menu').innerHTML=order==='original'?CATEGORIAS.map(c=>{const rows=list.filter(i=>PRODUTOS[i].categoria===c);return rows.length?section(c,rows):'';}).join(''):'<div class="product-grid">'+list.map(item).join('')+'</div>';
+ $('#empty').hidden=list.length>0;$('#limparBusca').hidden=!term;$('#resultadoBusca').textContent=list.length+(list.length===1?' produto encontrado':' produtos encontrados');
+ 
+}
+function tabs(){
+ $('#cats').innerHTML=['Todos',...CATEGORIAS].map(c=>'<button type="button" data-cat="'+esc(c)+'" aria-pressed="'+(c===categoria)+'">'+icon(categoryIcons[c],'category-icon')+esc(c)+'</button>').join('');
+}
+function markTab(){document.querySelectorAll('#cats [data-cat]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.cat===categoria)));}
+function toMenuTop(){try{const top=$('#menu').getBoundingClientRect().top+window.scrollY-$('#cats').offsetHeight-8;if(window.scrollY>top)window.scrollTo({top:Math.max(0,top),behavior:'smooth'});}catch(e){}}
+function totals(){
+ const uncertain=delivery()&&LOJA.taxaEntrega==null;
+ $('#tot').innerHTML='<div><span>Subtotal</span><span>'+brl(subtotalCents()/100)+'</span></div>'+(delivery()?'<div class="fee"><span>Taxa de entrega</span><span>'+(uncertain?'A confirmar':brl(LOJA.taxaEntrega))+'</span></div>':'')+'<div><span>Total'+(uncertain?' dos produtos':'')+'</span><span>'+brl(totalCents()/100)+'</span></div>'+(uncertain?'<p class="delivery-note">O total final depende da taxa de entrega.</p>':'');
+}
+function bar(){const has=count()>0;$('#bar').classList.toggle('show',has);document.body.classList.toggle('has-cart',has);}
+const SUGESTOES=[['Bebidas',2],['Adicionais',2]];
+function suggest(){
+ const box=$('#sugestoes'),inCart=ids();
+ const hasFood=inCart.some(i=>['Espetos','Combos'].includes(PRODUTOS[i].categoria));
+ const picks=[];
+ if(hasFood)SUGESTOES.forEach(([cat,max])=>{
+  if(inCart.some(i=>PRODUTOS[i].categoria===cat))return;
+  let n=0;PRODUTOS.forEach((p,i)=>{if(p.categoria===cat&&p.disponivel&&n<max){picks.push(i);n++;}});
+ });
+ box.hidden=!picks.length;
+ box.innerHTML=picks.length?'<h3>Que tal completar o pedido?</h3><div class="chips">'+picks.map(i=>'<button type="button" class="chip" data-add="'+i+'" aria-label="Adicionar '+esc(PRODUTOS[i].nome)+' ao pedido"><span aria-hidden="true">+</span> '+esc(PRODUTOS[i].nome)+' <b>'+brl(PRODUTOS[i].preco)+'</b></button>').join('')+'</div>':'';
+}
+function cart(){
+ $('#count').textContent=count();$('#cartTotal').textContent=brl(subtotalCents()/100);
+ $('#lista').innerHTML=ids().map(i=>{const p=PRODUTOS[i];return '<div class="cart-row"><img src="'+esc(img(p.imagem))+'" alt="'+esc(p.nome)+'"><div><h4>'+esc(p.nome)+'</h4><p>'+brl(p.preco)+' / un. · '+brl(cents(p)*qtd[i]/100)+'</p></div><div class="row-tools">'+stepper(i)+'<button type="button" class="remove" data-remove="'+i+'" aria-label="Remover '+esc(p.nome)+' do carrinho" title="Remover item">×</button></div></div>';}).join('');
+ $('#cart-empty').hidden=count()>0;$('#clear').disabled=count()===0;$('#enviar').disabled=count()===0;totals();bar();suggest();
+}
+function change(i,d){if(!PRODUTOS[i]?.disponivel)return;const q=Math.max(0,(qtd[i]||0)+d);if(q)qtd[i]=q;else delete qtd[i];save();refreshItem(i);cart();$('#announce').textContent=PRODUTOS[i].nome+': '+q+' no carrinho';}
+function closeCart(){ $('#sheet').close();document.body.classList.remove('lock');(count()?$('#abrir'):$('#cats [aria-pressed=true]')).focus(); }
+function address(){return ['rua','numero','bairro','cidade','cep','complemento'].map(id=>$('#'+id).value.trim()).filter(Boolean).join(', ');}
+function validate(){
+ document.querySelectorAll('[aria-invalid]').forEach(el=>el.removeAttribute('aria-invalid'));
+ const fail=(message,id)=>{if(id){$('#'+id).setAttribute('aria-invalid','true');$('#'+id).focus();}$('#err').textContent=message;return false;};
+ if(!count())return fail('Adicione pelo menos um produto ao carrinho.');
+ if(subtotalCents()<Math.round(LOJA.pedidoMinimo*100))return fail('O pedido mínimo é '+brl(LOJA.pedidoMinimo)+'.');
+ if(!$('#cli').value.trim())return fail('Informe seu nome.','cli');
+ if(!/^\d{10,13}$/.test($('#tel').value.replace(/\D/g,'')))return fail('Informe um telefone válido com DDD.','tel');
+ if(delivery()){
+ for(const [id,label] of [['rua','rua ou avenida'],['numero','número (ou S/N)'],['bairro','bairro'],['cidade','cidade'],['cep','CEP']])if(!$('#'+id).value.trim())return fail('Informe '+label+' para entrega.',id);
+ if(!/^\d{8}$/.test($('#cep').value.replace(/\D/g,'')))return fail('Informe um CEP válido com 8 números.','cep');
+ }
+ if($('#pag').value==='Dinheiro'&&$('#needChange').checked){const value=Number($('#troco').value.replace(',','.'));if(!Number.isFinite(value)||value<=0||Math.round(value*100)<totalCents())return fail('Informe um valor para troco igual ou maior que o total.','troco');}
+ $('#err').textContent='';return true;
+}
+function message(){
+ const uncertain=delivery()&&LOJA.taxaEntrega==null;
+ const lines=['*'+LOJA.nome+'*','Olá! Quero fazer um pedido:','','*Itens*',...ids().map(i=>qtd[i]+'x '+PRODUTOS[i].nome+' — '+brl(PRODUTOS[i].preco)+' / un. — '+brl(cents(PRODUTOS[i])*qtd[i]/100)),'','Subtotal: '+brl(subtotalCents()/100)];
+ if(delivery())lines.push('Taxa de entrega: '+(uncertain?'a confirmar pelo estabelecimento':brl(LOJA.taxaEntrega)));
+ lines.push((uncertain?'Total dos produtos: ':'Total: ')+brl(totalCents()/100));if(uncertain)lines.push('Total final: produtos + taxa de entrega a confirmar.');
+ lines.push('','Cliente: '+$('#cli').value.trim(),'Telefone: '+$('#tel').value.trim(),'Recebimento: '+$('input[name="tipo"]:checked').value);
+ if(delivery())lines.push('Endereço: '+address());lines.push('Pagamento: '+$('#pag').value);
+ if($('#pag').value==='Dinheiro')lines.push($('#needChange').checked?'Troco para: '+brl(Number($('#troco').value.replace(',','.'))):'Não preciso de troco.');
+ if($('#obs').value.trim())lines.push('Observações: '+$('#obs').value.trim());lines.push('','Aguardo a confirmação do estabelecimento.');return lines.join('\n');
+}
+document.addEventListener('click',e=>{
+ const add=e.target.closest('[data-add]');if(add){change(Number(add.dataset.add),1);($('#sugestoes button')||$('#lista button'))?.focus();return;}
+ const b=e.target.closest('[data-d]');if(b){const i=Number(b.dataset.i),d=Number(b.dataset.d),inCart=Boolean(b.closest('#sheet'));change(i,d);const parent=inCart?$('#lista'):document.querySelector('[data-item="'+i+'"]');const focus=parent?.querySelector('[data-i="'+i+'"][data-d="'+d+'"]')||parent?.querySelector('button');focus?.focus();return;}
+ const remove=e.target.closest('[data-remove]');if(remove){delete qtd[Number(remove.dataset.remove)];save();menu();cart();$('#clear').focus();return;}
+ const cat=e.target.closest('[data-cat]');if(cat){categoria=cat.dataset.cat;markTab();menu();try{cat.scrollIntoView({inline:'center',block:'nearest'});}catch(err){}toMenuTop();}
+});
+$('#abrir').addEventListener('click',()=>{cart();$('#sheet').showModal();document.body.classList.add('lock');});
+$('#fechar').addEventListener('click',closeCart);$('#continuar').addEventListener('click',closeCart);
+$('#sheet').addEventListener('close',()=>document.body.classList.remove('lock'));
+$('#clear').addEventListener('click',()=>{qtd={};save();menu();cart();});
+$('#busca').addEventListener('input',menu);$('#ordem').addEventListener('change',menu);
+$('#limparBusca').addEventListener('click',()=>{$('#busca').value='';menu();$('#busca').focus();});
+$('#reset').addEventListener('click',()=>{$('#busca').value='';categoria='Todos';$('#ordem').value='original';markTab();menu();});
+document.querySelectorAll('input[name=tipo]').forEach(el=>el.addEventListener('change',()=>{$('#optend').hidden=!delivery();totals();}));
+$('#pag').addEventListener('change',()=>{$('#cash').hidden=$('#pag').value!=='Dinheiro';});
+$('#needChange').addEventListener('change',()=>{$('#change-field').hidden=!$('#needChange').checked;});
+$('#checkout').addEventListener('input',()=>{$('#err').textContent='';});
+const onlyDigits=v=>String(v).replace(/\D/g,'');
+function maskTel(v){let d=onlyDigits(v);if(d.length>11&&d.startsWith('55'))d=d.slice(2);d=d.slice(0,11);
+ if(d.length>10)return '('+d.slice(0,2)+') '+d.slice(2,7)+'-'+d.slice(7);
+ if(d.length>6)return '('+d.slice(0,2)+') '+d.slice(2,6)+'-'+d.slice(6);
+ if(d.length>2)return '('+d.slice(0,2)+') '+d.slice(2);
+ return d?'('+d:'';}
+function maskCep(v){const d=onlyDigits(v).slice(0,8);return d.length>5?d.slice(0,5)+'-'+d.slice(5):d;}
+$('#tel').addEventListener('input',e=>{e.target.value=maskTel(e.target.value);});
+$('#cep').addEventListener('input',e=>{e.target.value=maskCep(e.target.value);});
+$('#sheet').addEventListener('click',e=>{if(e.target!==e.currentTarget)return;const r=e.currentTarget.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeCart();});
+
+$('#checkout').addEventListener('submit',e=>{e.preventDefault();if(!validate())return;const url='https://wa.me/'+LOJA.whatsapp+'?text='+encodeURIComponent(message());const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';document.body.append(link);link.click();link.remove();});
+document.querySelectorAll('[data-img]').forEach(el=>{el.src=img(el.dataset.img);});
+$('#zap').href='https://wa.me/'+LOJA.whatsapp;
+document.querySelectorAll('[data-insta]').forEach(a=>{if(LOJA.instagram)a.href='https://instagram.com/'+LOJA.instagram;});
+$('#catalogCount').textContent=PRODUTOS.length+' opções para escolher';
+tabs();status();setInterval(status,60000);menu();cart();
+
+</script>
+
+
+<script src="./imperial-v4-2.js"></script>
+<script src="./imperial-v4-3.js"></script>
+</body></html>
