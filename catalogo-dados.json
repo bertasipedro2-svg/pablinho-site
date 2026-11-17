@@ -1,0 +1,248 @@
+{
+  "versao": 1,
+  "produtos": [
+    {
+      "nome": "Combo Família",
+      "categoria": "Combos",
+      "preco": 94.9,
+      "descricao": "10 espetinhos: 2 fraldinha, 2 carne com bacon, 2 frango, 2 linguiça e 2 queijo coalho. Serve 4 pessoas.",
+      "icone": "combo",
+      "imagem": "topo",
+      "disponivel": true
+    },
+    {
+      "nome": "Carne fraldinha",
+      "categoria": "Espetos",
+      "preco": 11,
+      "descricao": "Espetinho de fraldinha na brasa.",
+      "icone": "carne",
+      "imagem": "foto-carne-fraldinha",
+      "disponivel": true
+    },
+    {
+      "nome": "Carne com bacon",
+      "categoria": "Espetos",
+      "preco": 12,
+      "descricao": "Espetinho de carne com bacon, preparado na brasa.",
+      "icone": "carne-bacon",
+      "imagem": "foto-carne-com-bacon",
+      "disponivel": true
+    },
+    {
+      "nome": "Frango",
+      "categoria": "Espetos",
+      "preco": 10,
+      "descricao": "Espetinho de frango na brasa.",
+      "icone": "frango",
+      "imagem": "foto-frango",
+      "disponivel": true
+    },
+    {
+      "nome": "Frango com bacon",
+      "categoria": "Espetos",
+      "preco": 15,
+      "descricao": "Espetinho de frango com bacon, preparado na brasa.",
+      "icone": "frango-bacon",
+      "imagem": "foto-frango-com-bacon",
+      "disponivel": true
+    },
+    {
+      "nome": "Linguiça",
+      "categoria": "Espetos",
+      "preco": 10,
+      "descricao": "Espetinho de linguiça na brasa.",
+      "icone": "linguica",
+      "imagem": "foto-carne-com-bacon",
+      "disponivel": true
+    },
+    {
+      "nome": "Misto",
+      "categoria": "Espetos",
+      "preco": 11,
+      "descricao": "Uma combinação de sabores em um só espetinho.",
+      "icone": "misto",
+      "imagem": "topo",
+      "disponivel": true
+    },
+    {
+      "nome": "Kafta com queijo",
+      "categoria": "Espetos",
+      "preco": 16,
+      "descricao": "Kafta acompanhada de queijo.",
+      "icone": "kafta",
+      "imagem": "foto-carne-fraldinha",
+      "disponivel": true
+    },
+    {
+      "nome": "Queijo coalho",
+      "categoria": "Espetos",
+      "preco": 10,
+      "descricao": "Queijo coalho preparado na brasa.",
+      "icone": "queijo",
+      "imagem": "topo",
+      "disponivel": true
+    },
+    {
+      "nome": "Queijo coalho com mel",
+      "categoria": "Espetos",
+      "preco": 12,
+      "descricao": "Queijo coalho com toque de mel.",
+      "icone": "queijo-mel",
+      "imagem": "topo",
+      "disponivel": true
+    },
+    {
+      "nome": "Queijo com bacon",
+      "categoria": "Espetos",
+      "preco": 16,
+      "descricao": "Queijo combinado com bacon.",
+      "icone": "queijo-bacon",
+      "imagem": "foto-carne-com-bacon",
+      "disponivel": true
+    },
+    {
+      "nome": "Pão de alho",
+      "categoria": "Espetos",
+      "preco": 10,
+      "descricao": "Pão de alho preparado na brasa.",
+      "icone": "pao-alho",
+      "imagem": "topo",
+      "disponivel": true
+    },
+    {
+      "nome": "Molho de pimenta",
+      "categoria": "Adicionais",
+      "preco": 1,
+      "descricao": "Adicional para acompanhar seu pedido.",
+      "icone": "molho-pimenta",
+      "imagem": "icone-molho-de-pimenta",
+      "disponivel": true
+    },
+    {
+      "nome": "Molho de alho",
+      "categoria": "Adicionais",
+      "preco": 1,
+      "descricao": "Adicional para acompanhar seu pedido.",
+      "icone": "molho-alho",
+      "imagem": "icone-molho-de-alho",
+      "disponivel": true
+    },
+    {
+      "nome": "Farofa",
+      "categoria": "Adicionais",
+      "preco": 1,
+      "descricao": "Acompanhamento para completar seu pedido.",
+      "icone": "farofa",
+      "imagem": "icone-farofa",
+      "disponivel": true
+    },
+    {
+      "nome": "Mel",
+      "categoria": "Adicionais",
+      "preco": 1,
+      "descricao": "Adicional para combinar com seu espetinho.",
+      "icone": "mel",
+      "imagem": "icone-mel",
+      "disponivel": true
+    },
+    {
+      "nome": "Coca lata",
+      "categoria": "Bebidas",
+      "preco": 9,
+      "descricao": "Refrigerante em lata.",
+      "icone": "lata-coca",
+      "imagem": "coca.jpg",
+      "disponivel": true
+    },
+    {
+      "nome": "Fanta lata",
+      "categoria": "Bebidas",
+      "preco": 9,
+      "descricao": "Refrigerante em lata.",
+      "icone": "lata-fanta",
+      "imagem": "fanta.jpg",
+      "disponivel": true
+    },
+    {
+      "nome": "Coca 2L",
+      "categoria": "Bebidas",
+      "preco": 17,
+      "descricao": "Refrigerante Coca-Cola de 2 litros.",
+      "icone": "garrafa-coca",
+      "imagem": "icone-coca-2l",
+      "disponivel": true
+    },
+    {
+      "nome": "Água",
+      "categoria": "Bebidas",
+      "preco": 5,
+      "descricao": "Água para acompanhar sua refeição.",
+      "icone": "agua",
+      "imagem": "icone-agua",
+      "disponivel": true
+    },
+    {
+      "nome": "Skol lata",
+      "categoria": "Bebidas",
+      "preco": 7,
+      "descricao": "Cerveja em lata.",
+      "icone": "lata-skol",
+      "imagem": "icone-skol-lata",
+      "disponivel": true
+    },
+    {
+      "nome": "Brahma lata",
+      "categoria": "Bebidas",
+      "preco": 7,
+      "descricao": "Cerveja em lata.",
+      "icone": "lata-brahma",
+      "imagem": "icone-skol-lata",
+      "disponivel": true
+    },
+    {
+      "nome": "Heineken lata",
+      "categoria": "Bebidas",
+      "preco": 10,
+      "descricao": "Cerveja em lata.",
+      "icone": "lata-heineken",
+      "imagem": "icone-skol-lata",
+      "disponivel": true
+    },
+    {
+      "nome": "Budweiser lata",
+      "categoria": "Bebidas",
+      "preco": 8.5,
+      "descricao": "Cerveja em lata.",
+      "icone": "lata-budweiser",
+      "imagem": "icone-skol-lata",
+      "disponivel": true
+    },
+    {
+      "nome": "Trento Chocolate",
+      "categoria": "Gôndola",
+      "preco": 7,
+      "descricao": "Chocolate Trento.",
+      "icone": "trento-chocolate",
+      "imagem": "icone-trento-chocolate",
+      "disponivel": true
+    },
+    {
+      "nome": "Trento Branco-Dark",
+      "categoria": "Gôndola",
+      "preco": 7,
+      "descricao": "Chocolate Trento Branco-Dark.",
+      "icone": "trento-branco-dark",
+      "imagem": "icone-trento-chocolate",
+      "disponivel": true
+    },
+    {
+      "nome": "Trento Duo",
+      "categoria": "Gôndola",
+      "preco": 7,
+      "descricao": "Chocolate Trento Duo.",
+      "icone": "trento-duo",
+      "imagem": "icone-trento-chocolate",
+      "disponivel": true
+    }
+  ]
+}
