@@ -52,3 +52,12 @@ body{background:radial-gradient(ellipse 65% 35% at 80% 0%,rgba(27,128,162,.16),t
 @keyframes v12-blink{50%{opacity:.45}}
 @media(max-width:760px){.hero{height:540px;min-height:0}.hero h1{font-size:clamp(3.7rem,15vw,6.4rem)}.hero-shade{background:linear-gradient(90deg,rgba(4,10,16,.92),rgba(5,14,22,.47)),linear-gradient(0deg,rgba(3,10,15,.84),transparent 65%)}.v12-glow{width:250px;right:-50px}.v12-back{right:12px;bottom:105px}.v12-toast{max-width:calc(100vw - 30px);text-align:center}}
 @media(prefers-reduced-motion:reduce){.hero-photo,.v12-grid,.v12-scan,.v12-glow,.v12-label:before{animation:none!important}.product,.product-image img,.v12-back,.v12-toast{transition:none!important}}
+
+/* Disponibilidade visível no card — V12 */
+.stock-badge{position:absolute;z-index:5;right:10px;top:10px;display:inline-flex;align-items:center;gap:5px;border-radius:100px;padding:7px 11px;font-size:11px;line-height:1.2;font-weight:800;letter-spacing:.01em;box-shadow:0 5px 18px rgba(0,0,0,.4);backdrop-filter:blur(12px)}
+.stock-badge.in-stock{color:#c6ffe5;background:rgba(7,75,52,.91);border:1px solid rgba(98,239,174,.65)}
+.stock-badge.out-stock{color:#ffe4e1;background:rgba(110,31,34,.94);border:1px solid rgba(255,132,132,.75)}
+.product.unavailable{opacity:.82}
+.product.unavailable .product-image img{filter:grayscale(.45) brightness(.72)}
+.product.unavailable .add,.product.unavailable .step{display:none}
+@media(max-width:420px){.stock-badge{top:8px;right:8px;padding:6px 9px;font-size:10px}}
