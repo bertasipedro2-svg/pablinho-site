@@ -39,6 +39,7 @@ dialog{position:fixed;inset:0 0 0 auto;margin:0;width:min(580px,100%);max-width:
 <link rel="stylesheet" href="../imperial-v4-2.css">
 <link rel="stylesheet" href="../imperial-v4-3.css">
 <link rel="stylesheet" href="./imperial-v12.css">
+<meta name="pablinho-brasa-origin" content="">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -72,6 +73,7 @@ dialog{position:fixed;inset:0 0 0 auto;margin:0;width:min(580px,100%);max-width:
 <label>Observações <span class="muted">(opcional)</span><textarea id="obs" maxlength="1000" placeholder="Algum detalhe sobre o seu pedido?"></textarea></label><div id="tot" class="totals"></div><p id="err" class="error" role="alert" tabindex="-1"></p><p id="closedNote" class="closed-note" hidden></p><button class="button send" type="submit" id="enviar">Enviar pedido pelo WhatsApp <span aria-hidden="true">↗</span></button><p class="checkout-note">O WhatsApp abrirá com seu pedido. O envio e a confirmação são feitos na conversa com o estabelecimento.</p></form></dialog>
 <div class="sr-only" id="announce" aria-live="polite"></div>
 <script src="../imperial-v4-2-images.js"></script>
+<script src="../brasa-catalogo.js"></script>
 <script>
 /* Imagens do catálogo, gravadas uma única vez e reaproveitadas.
    Para trocar uma foto: troque o texto da chave abaixo, ou aponte "imagem" do produto para um arquivo (ex.: "fotos/misto.jpg"). */
@@ -139,6 +141,8 @@ const img = k => IMG[k] || (k.startsWith('imagens/') ? '../' + k : k);
 document.addEventListener('error', e => { const el=e.target; if(el?.tagName==='IMG' && el.getAttribute('src')?.includes('imagens/espeto-carne.webp')) { el.src=IMG['foto-carne-fraldinha']; } }, true);
 const icon = (id, cls) => '<svg class="ic' + (cls ? ' ' + cls : '') + '" aria-hidden="true"><use href="#' + id + '"/></svg>';
 const STORAGE = 'pablinho-cart-v1';
+const BRASA_STORAGE = 'pablinho-cart-brasa-v1';
+const brasaOrigin = document.querySelector('meta[name="pablinho-brasa-origin"]').content.trim();
 let qtd = {}, categoria = 'Todos', catalogReady = false;
 try { const stored=JSON.parse(localStorage.getItem(STORAGE)||'{}'); if(stored && typeof stored==='object' && !Array.isArray(stored)) Object.entries(stored).forEach(([id,q])=>{if(/^\d+$/.test(id)&&Number.isSafeInteger(q)&&q>0)qtd[id]=q;}); } catch(e) { /* Navegação privada ou armazenamento indisponível: carrinho continua em memória. */ }
 const ids = () => Object.keys(qtd).map(Number).filter(i=>PRODUTOS[i]?.disponivel&&qtd[i]>0);
@@ -147,7 +151,14 @@ const subtotalCents = () => ids().reduce((s,i)=>s+cents(PRODUTOS[i])*qtd[i],0);
 const delivery = () => $('input[name="tipo"]:checked').value === 'Entrega';
 const totalCents = () => subtotalCents()+(delivery()&&LOJA.taxaEntrega!=null?Math.round(LOJA.taxaEntrega*100):0);
 const categoryIcons = {'Todos':'i-grid','Combos':'i-users','Espetos':'i-flame','Adicionais':'i-plus','Bebidas':'i-cup','Gôndola':'i-bar'};
-function save(){ try{localStorage.setItem(STORAGE,JSON.stringify(qtd));}catch(e){} }
+function save(){
+ try{
+  if(brasaOrigin){
+   const items=Object.entries(qtd).filter(([i])=>PRODUTOS[i]?.id);
+   localStorage.setItem(BRASA_STORAGE,JSON.stringify(Object.fromEntries(items.map(([i,quantity])=>[PRODUTOS[i].id,quantity]))));
+  }else localStorage.setItem(STORAGE,JSON.stringify(qtd));
+ }catch(e){}
+}
 function isOpen(){
  const parts=new Intl.DateTimeFormat('pt-BR',{timeZone:CONFIG.fuso,hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
  const hour=Number(parts.find(p=>p.type==='hour')?.value||0), minute=Number(parts.find(p=>p.type==='minute')?.value||0);
@@ -203,7 +214,7 @@ function cart(){
  $('#lista').innerHTML=ids().map(i=>{const p=PRODUTOS[i];return '<div class="cart-row"><img src="'+esc(img(p.imagem))+'" alt="'+esc(p.nome)+'"><div><h4>'+esc(p.nome)+'</h4><p>'+brl(p.preco)+' / un. · '+brl(cents(p)*qtd[i]/100)+'</p></div><div class="row-tools">'+stepper(i)+'<button type="button" class="remove" data-remove="'+i+'" aria-label="Remover '+esc(p.nome)+' do carrinho" title="Remover item">×</button></div></div>';}).join('');
  $('#cart-empty').hidden=count()>0;$('#clear').disabled=count()===0;$('#enviar').disabled=!catalogReady||count()===0;totals();bar();suggest();
 }
-function change(i,d){if(!catalogReady||!PRODUTOS[i]?.disponivel)return;const q=Math.max(0,(qtd[i]||0)+d);if(q)qtd[i]=q;else delete qtd[i];save();refreshItem(i);cart();$('#announce').textContent=PRODUTOS[i].nome+': '+q+' no carrinho';}
+function change(i,d){if(!catalogReady||!PRODUTOS[i]?.disponivel)return;const q=Math.max(0,Math.min(999,(qtd[i]||0)+d));if(q)qtd[i]=q;else delete qtd[i];save();refreshItem(i);cart();$('#announce').textContent=PRODUTOS[i].nome+': '+q+' no carrinho';}
 function closeCart(){ $('#sheet').close();document.body.classList.remove('lock');(count()?$('#abrir'):$('#cats [aria-pressed=true]')).focus(); }
 function address(){return ['rua','numero','bairro','cidade','cep','complemento'].map(id=>$('#'+id).value.trim()).filter(Boolean).join(', ');}
 function validate(){
@@ -259,7 +270,16 @@ $('#tel').addEventListener('input',e=>{e.target.value=maskTel(e.target.value);})
 $('#cep').addEventListener('input',e=>{e.target.value=maskCep(e.target.value);});
 $('#sheet').addEventListener('click',e=>{if(e.target!==e.currentTarget)return;const r=e.currentTarget.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeCart();});
 
-$('#checkout').addEventListener('submit',e=>{e.preventDefault();if(!validate())return;const url='https://wa.me/'+LOJA.whatsapp+'?text='+encodeURIComponent(message());const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';document.body.append(link);link.click();link.remove();});
+$('#checkout').addEventListener('submit',e=>{e.preventDefault();
+ if(brasaOrigin){
+  if(!catalogReady||!count())return;
+  if(ids().length>100){$('#err').textContent='Revise o carrinho. O limite é de 100 produtos diferentes por pedido.';return;}
+  const destination=new URL('/catalogo',brasaOrigin);
+  destination.hash=new URLSearchParams({carrinho:ids().map(i=>PRODUTOS[i].id+':'+qtd[i]).join(',')}).toString();
+  window.location.assign(destination);
+  return;
+ }
+ if(!validate())return;const url='https://wa.me/'+LOJA.whatsapp+'?text='+encodeURIComponent(message());const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';document.body.append(link);link.click();link.remove();});
 document.querySelectorAll('[data-img]').forEach(el=>{el.src=img(el.dataset.img);});
 $('#zap').href='https://wa.me/'+LOJA.whatsapp;
 document.querySelectorAll('[data-insta]').forEach(a=>{if(LOJA.instagram)a.href='https://instagram.com/'+LOJA.instagram;});
@@ -271,12 +291,27 @@ async function carregarCatalogoPublicado(){
   if(!response.ok)throw new Error('Dados não encontrados');
   const data=await response.json();
   if(!data||!Array.isArray(data.produtos)||data.produtos.length>300)throw new Error('Dados inválidos');
-  const list=data.produtos.map(p=>({nome:String(p.nome||''),categoria:String(p.categoria||''),preco:Number(p.preco),descricao:String(p.descricao||''),icone:String(p.icone||'grid'),imagem:String(p.imagem||'topo'),disponivel:p.disponivel===true}));
+  let list=data.produtos.map(p=>({nome:String(p.nome||''),categoria:String(p.categoria||''),preco:Number(p.preco),descricao:String(p.descricao||''),icone:String(p.icone||'grid'),imagem:String(p.imagem||'topo'),disponivel:p.disponivel===true}));
   if(!list.every(p=>p.nome&&CATEGORIAS.includes(p.categoria)&&Number.isFinite(p.preco)&&p.preco>=0))throw new Error('Produtos inválidos');
+  if(brasaOrigin){
+   list=await window.loadBrasaCatalog(brasaOrigin,list,'../brasa-vinculos.json',CATEGORIAS);
+   qtd={};
+   try {
+    const stored=JSON.parse(localStorage.getItem(BRASA_STORAGE)||'{}');
+    list.forEach((item,i)=>{
+     if(Number.isInteger(stored?.[item.id])&&stored[item.id]>0&&stored[item.id]<=999)qtd[i]=stored[item.id];
+    });
+   }catch(e){}
+   $('#checkout').querySelectorAll(':scope > *:not(#tot):not(#err):not(#enviar):not(.checkout-note)').forEach(el=>{el.style.display='none';});
+   $('#enviar').textContent='Revisar pedido no Brasa';
+   $('.checkout-note').textContent='Informe seus dados e confirme o pedido no Brasa.';
+   $('#cart-description').textContent='Confira os itens antes de abrir o checkout.';
+  }else{
   const signature=JSON.stringify(list.map(p=>[p.nome,p.preco,p.disponivel]));
   let previous;
   try{previous=localStorage.getItem('pablinho-catalog-signature');}catch(e){}
   if(previous!==signature){qtd={};try{localStorage.removeItem(STORAGE);localStorage.setItem('pablinho-catalog-signature',signature);}catch(e){}}
+  }
   PRODUTOS.splice(0,PRODUTOS.length,...list);
   $('#catalogCount').textContent=PRODUTOS.length+' opções para escolher';
   catalogReady=true;
