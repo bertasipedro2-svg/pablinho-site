@@ -7,7 +7,7 @@
       "preco": 94.9,
       "descricao": "10 espetinhos: 2 fraldinha, 2 carne com bacon, 2 frango, 2 linguiça e 2 queijo coalho. Serve 4 pessoas.",
       "icone": "combo",
-      "imagem": "topo",
+      "imagem": "imagens/combo-familia.webp",
       "disponivel": true
     },
     {
@@ -52,7 +52,7 @@
       "preco": 10,
       "descricao": "Espetinho de linguiça na brasa.",
       "icone": "linguica",
-      "imagem": "foto-carne-com-bacon",
+      "imagem": "imagens/linguica.webp",
       "disponivel": true
     },
     {
@@ -61,7 +61,7 @@
       "preco": 11,
       "descricao": "Uma combinação de sabores em um só espetinho.",
       "icone": "misto",
-      "imagem": "topo",
+      "imagem": "imagens/misto.webp",
       "disponivel": true
     },
     {
@@ -70,7 +70,7 @@
       "preco": 16,
       "descricao": "Kafta acompanhada de queijo.",
       "icone": "kafta",
-      "imagem": "foto-carne-fraldinha",
+      "imagem": "imagens/kafta-com-queijo.webp",
       "disponivel": true
     },
     {
@@ -79,7 +79,7 @@
       "preco": 10,
       "descricao": "Queijo coalho preparado na brasa.",
       "icone": "queijo",
-      "imagem": "topo",
+      "imagem": "imagens/queijo-coalho.webp",
       "disponivel": true
     },
     {
@@ -88,7 +88,7 @@
       "preco": 12,
       "descricao": "Queijo coalho com toque de mel.",
       "icone": "queijo-mel",
-      "imagem": "topo",
+      "imagem": "imagens/queijo-coalho-com-mel.webp",
       "disponivel": true
     },
     {
@@ -97,7 +97,7 @@
       "preco": 16,
       "descricao": "Queijo combinado com bacon.",
       "icone": "queijo-bacon",
-      "imagem": "foto-carne-com-bacon",
+      "imagem": "imagens/queijo-com-bacon.webp",
       "disponivel": true
     },
     {
@@ -106,7 +106,7 @@
       "preco": 10,
       "descricao": "Pão de alho preparado na brasa.",
       "icone": "pao-alho",
-      "imagem": "topo",
+      "imagem": "imagens/pao-de-alho.webp",
       "disponivel": true
     },
     {
@@ -151,7 +151,7 @@
       "preco": 9,
       "descricao": "Refrigerante em lata.",
       "icone": "lata-coca",
-      "imagem": "coca.jpg",
+      "imagem": "imagens/coca-lata.webp",
       "disponivel": true
     },
     {
@@ -160,7 +160,7 @@
       "preco": 9,
       "descricao": "Refrigerante em lata.",
       "icone": "lata-fanta",
-      "imagem": "fanta.jpg",
+      "imagem": "imagens/fanta-lata.webp",
       "disponivel": true
     },
     {
@@ -196,7 +196,7 @@
       "preco": 7,
       "descricao": "Cerveja em lata.",
       "icone": "lata-brahma",
-      "imagem": "icone-skol-lata",
+      "imagem": "imagens/brahma-lata.webp",
       "disponivel": true
     },
     {
@@ -205,7 +205,7 @@
       "preco": 10,
       "descricao": "Cerveja em lata.",
       "icone": "lata-heineken",
-      "imagem": "icone-skol-lata",
+      "imagem": "imagens/heineken-lata.webp",
       "disponivel": true
     },
     {
@@ -214,7 +214,7 @@
       "preco": 8.5,
       "descricao": "Cerveja em lata.",
       "icone": "lata-budweiser",
-      "imagem": "icone-skol-lata",
+      "imagem": "imagens/budweiser-lata.webp",
       "disponivel": true
     },
     {
@@ -223,7 +223,7 @@
       "preco": 7,
       "descricao": "Chocolate Trento.",
       "icone": "trento-chocolate",
-      "imagem": "icone-trento-chocolate",
+      "imagem": "imagens/trento-chocolate.webp",
       "disponivel": true
     },
     {
@@ -232,7 +232,7 @@
       "preco": 7,
       "descricao": "Chocolate Trento Branco-Dark.",
       "icone": "trento-branco-dark",
-      "imagem": "icone-trento-chocolate",
+      "imagem": "imagens/trento-branco-dark.webp",
       "disponivel": true
     },
     {
@@ -241,7 +241,7 @@
       "preco": 7,
       "descricao": "Chocolate Trento Duo.",
       "icone": "trento-duo",
-      "imagem": "icone-trento-chocolate",
+      "imagem": "imagens/trento-duo.webp",
       "disponivel": true
     }
   ]
