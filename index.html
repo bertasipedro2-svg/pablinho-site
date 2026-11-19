@@ -135,7 +135,7 @@ const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const brl = n => Number(n).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 const normalize = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 const cents = p => Math.round(p.preco * 100);
-const img = k => k === 'foto-carne-fraldinha' ? './imagens/espeto-carne.webp' : (IMG[k] || k);
+const img = k => IMG[k] || (k.startsWith('imagens/') ? './' + k : k);
 document.addEventListener('error', e => { const el=e.target; if(el?.tagName==='IMG' && el.getAttribute('src')?.includes('imagens/espeto-carne.webp')) { el.src=IMG['foto-carne-fraldinha']; } }, true);
 const icon = (id, cls) => '<svg class="ic' + (cls ? ' ' + cls : '') + '" aria-hidden="true"><use href="#' + id + '"/></svg>';
 const STORAGE = 'pablinho-cart-v1';
